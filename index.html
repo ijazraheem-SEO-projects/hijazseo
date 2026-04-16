@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> IJAZ RAHEEM | SEO Expert Pakistan</title>
+  <META NAME="description" CONTENT="IJAZ RAHEEM is a SEO Expert Pakistan. He is a expert in SEO, SEM, SMO, SMM, and Digital Marketing. He is a expert in SEO, SEM, SMO, SMM, and Digital Marketing.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F0D060;
+      --gold-pale: #FFF8DC;
+      --green: #7EC8A4;
+      --green-dark: #4A9E78;
+      --green-pale: #E8F7F0;
+      --dark: #0D0D0D;
+      --dark-2: #1A1A1A;
+      --dark-3: #232323;
+      --text-light: #F5F5F0;
+      --text-muted: #A0A09A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      cursor: none;
+      overflow-x: hidden;
+    }
+
+    /* Custom Cursor */
+    #cursor {
+      width: 12px; height: 12px;
+      background: var(--gold);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+      mix-blend-mode: difference;
+    }
+    #cursor-ring {
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--gold-light);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9998;
+      transition: all 0.18s cubic-bezier(.17,.67,.83,.67);
+      opacity: 0.7;
+    }
+    body:has(a:hover) #cursor-ring,
+    body:has(button:hover) #cursor-ring {
+      transform: scale(2.2);
+      border-color: var(--green);
+      background: rgba(126,200,164,0.08);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.4rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(180deg, rgba(13,13,13,0.97) 0%, transparent 100%);
+      backdrop-filter: blur(2px);
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+      transition: all 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(13,13,13,0.97);
+      border-bottom-color: rgba(212,175,55,0.25);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--green));
+      transition: width 0.35s ease;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      padding: 0.55rem 1.4rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark) !important;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      transition: all 0.3s !important;
+      text-decoration: none;
+      font-size: 0.78rem !important;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .nav-cta:hover {
+      background: linear-gradient(135deg, var(--green), var(--green-dark)) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(126,200,164,0.3);
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,175,55,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse 60% 80% at 80% 70%, rgba(126,200,164,0.06) 0%, transparent 50%),
+                  linear-gradient(180deg, #0D0D0D 0%, #111208 50%, #0D1A12 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+    .hero-orb-1 {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      animation: floatOrb 8s ease-in-out infinite;
+    }
+    .hero-orb-2 {
+      position: absolute;
+      width: 350px; height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(126,200,164,0.1) 0%, transparent 70%);
+      bottom: 50px; left: -80px;
+      animation: floatOrb 10s ease-in-out infinite reverse;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -20px) scale(1.05); }
+      66% { transform: translate(-20px, 30px) scale(0.95); }
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 900px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid rgba(212,175,55,0.3);
+      padding: 0.4rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      background: rgba(212,175,55,0.05);
+      animation: fadeInDown 0.8s ease forwards;
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.5); }
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+      animation: fadeInUp 0.9s ease 0.2s both;
+    }
+    .hero-name span.gold {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200%;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .hero-name span.green {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 60%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.8rem;
+      animation: fadeInUp 0.9s ease 0.4s both;
+    }
+    .hero-title strong {
+      color: var(--green);
+      font-weight: 400;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2.8rem;
+      line-height: 1.8;
+      animation: fadeInUp 0.9s ease 0.6s both;
+    }
+    .hero-buttons {
+      display: flex; gap: 1.2rem;
+      justify-content: center; flex-wrap: wrap;
+      animation: fadeInUp 0.9s ease 0.8s both;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+    .btn-primary:hover::before { transform: translateX(0); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(126,200,164,0.3); }
+    .btn-primary span { position: relative; z-index: 1; }
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      border: 1px solid rgba(212,175,55,0.4);
+      color: var(--gold-light);
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.35s;
+      background: transparent;
+    }
+    .btn-secondary:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: rgba(126,200,164,0.05);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(126,200,164,0.15);
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-line {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      animation: fadeInUp 1s ease 1.2s both;
+    }
+    .scroll-line span {
+      font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .scroll-line-bar {
+      width: 1px; height: 50px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* STATS BAND */
+    #stats-band {
+      padding: 4rem 4rem;
+      background: linear-gradient(135deg, rgba(212,175,55,0.06) 0%, rgba(126,200,164,0.06) 100%);
+      border-top: 1px solid rgba(212,175,55,0.12);
+      border-bottom: 1px solid rgba(126,200,164,0.12);
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; max-width: 1100px; margin: 0 auto;
+    }
+    .stat-card {
+      text-align: center;
+      padding: 2rem 1rem;
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      background: rgba(13,13,13,0.4);
+      transition: all 0.4s;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--green));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .stat-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      line-height: 1;
+    }
+    .stat-plus { color: var(--green); }
+    .stat-label { color: var(--text-muted); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.5rem; }
+
+    /* SECTION SHARED */
+    section { padding: 7rem 4rem; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      color: var(--green);
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block; width: 30px; height: 1px;
+      background: var(--green);
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .gold-text { color: var(--gold-light); }
+    .green-text { color: var(--green); }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    /* TRANSITION SECTION 1: ABOUT — Forest Gold */
+    #about {
+      position: relative;
+      background:
+        radial-gradient(ellipse 70% 50% at 100% 50%, rgba(126,200,164,0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 0% 50%, rgba(212,175,55,0.08) 0%, transparent 50%),
+        linear-gradient(180deg, #0D0D0D 0%, #0D1510 50%, #0D1A14 100%);
+    }
+    .about-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .about-avatar {
+      position: relative;
+    }
+    .avatar-frame {
+      width: 100%; max-width: 420px;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(126,200,164,0.15));
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+    .avatar-frame:hover { border-color: rgba(212,175,55,0.5); transform: scale(1.02); }
+    .avatar-frame::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, transparent 50%, rgba(126,200,164,0.05) 100%);
+    }
+    .avatar-initials {
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      position: relative; z-index: 1;
+    }
+    .avatar-tag {
+      position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: rgba(13,13,13,0.9);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 4px;
+    }
+    .avatar-tag h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold-light); }
+    .avatar-tag p { font-size: 0.75rem; color: var(--green); letter-spacing: 0.1em; margin-top: 0.2rem; }
+    .about-corner {
+      position: absolute;
+      top: -15px; right: -15px;
+      width: 80px; height: 80px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      border-radius: 0 6px 0 0;
+    }
+    .skills-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .skill-row { display: flex; flex-direction: column; gap: 0.4rem; }
+    .skill-head { display: flex; justify-content: space-between; align-items: center; }
+    .skill-name { font-size: 0.82rem; letter-spacing: 0.08em; color: var(--text-light); }
+    .skill-pct { font-size: 0.78rem; color: var(--gold); font-family: 'Playfair Display', serif; }
+    .skill-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--green));
+      transform-origin: left;
+      animation: barGrow 1.5s cubic-bezier(.17,.67,.83,.67) forwards;
+      transform: scaleX(0);
+    }
+    @keyframes barGrow { to { transform: scaleX(1); } }
+
+    /* TRANSITION SECTION 2: SERVICES — Warm Dark */
+    #services {
+      background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(212,175,55,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, #0D1A14 0%, #12100A 50%, #0D0D0D 100%);
+    }
+    .services-header { text-align: center; margin-bottom: 4rem; }
+    .services-header .section-label { justify-content: center; }
+    .services-header .section-label::before { display: none; }
+    .services-header .section-label::after {
+      content: ''; display: block; width: 30px; height: 1px; background: var(--green);
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 4px;
+      background: rgba(13,13,13,0.5);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(.17,.67,.83,.67);
+      cursor: pointer;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, rgba(126,200,164,0.04) 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212,175,55,0.35);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.07);
+    }
+    .service-card:hover::after { opacity: 1; }
+    .service-icon {
+      width: 50px; height: 50px;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: var(--gold);
+      background: rgba(212,175,55,0.05);
+      transition: all 0.4s;
+      position: relative; z-index: 1;
+    }
+    .service-card:hover .service-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark);
+      border-color: transparent;
+      transform: rotate(10deg) scale(1.1);
+    }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+      position: relative; z-index: 1;
+      transition: color 0.3s;
+    }
+    .service-card:hover h3 { color: var(--gold-light); }
+    .service-card p {
+      font-size: 0.88rem; color: var(--text-muted);
+      line-height: 1.8; position: relative; z-index: 1;
+    }
+    .service-num {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; font-weight: 900;
+      color: rgba(212,175,55,0.05);
+      transition: color 0.4s;
+      line-height: 1;
+    }
+    .service-card:hover .service-num { color: rgba(212,175,55,0.12); }
+
+    /* TRANSITION SECTION 3: PROCESS — Deep Green */
+    #process {
+      background:
+        radial-gradient(ellipse 60% 60% at 30% 50%, rgba(126,200,164,0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #0D0D0D 0%, #091510 50%, #0D1A12 100%);
+      position: relative;
+    }
+    .process-inner { max-width: 1200px; margin: 0 auto; }
+    .process-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
+    .process-steps { display: flex; flex-direction: column; gap: 0; }
+    .process-step {
+      display: flex; gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .process-step:hover { padding-left: 0.5rem; }
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 900;
+      color: rgba(212,175,55,0.2);
+      min-width: 40px;
+      transition: color 0.3s;
+    }
+    .process-step:hover .step-num { color: var(--gold); }
+    .step-content h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--text-light); margin-bottom: 0.4rem;
+      transition: color 0.3s;
+    }
+    .process-step:hover .step-content h4 { color: var(--gold-light); }
+    .step-content p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* TRANSITION SECTION 4: PORTFOLIO */
+    #portfolio {
+      background:
+        radial-gradient(ellipse 70% 50% at 80% 50%, rgba(212,175,55,0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #0D1A12 0%, #100D0A 50%, #0D0D0D 100%);
+    }
+    .portfolio-header { margin-bottom: 4rem; display: flex; align-items: flex-end; justify-content: space-between; }
+    .portfolio-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+    }
+    .portfolio-card {
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      background: rgba(13,13,13,0.6);
+      transition: all 0.45s cubic-bezier(.17,.67,.83,.67);
+      cursor: pointer;
+      position: relative;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-10px) scale(1.01);
+      border-color: rgba(212,175,55,0.4);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 50px rgba(212,175,55,0.08);
+    }
+    .portfolio-thumb {
+      height: 200px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(126,200,164,0.12));
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-thumb::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(126,200,164,0.08));
+      transition: opacity 0.4s;
+    }
+    .portfolio-card:hover .portfolio-thumb::before { opacity: 2; }
+    .thumb-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: rgba(212,175,55,0.6);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative; z-index: 1;
+    }
+    .thumb-overlay {
+      position: absolute; inset: 0;
+      background: rgba(13,13,13,0.8);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .portfolio-card:hover .thumb-overlay { opacity: 1; }
+    .thumb-cta {
+      padding: 0.6rem 1.6rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .portfolio-body { padding: 1.5rem; }
+    .portfolio-tag {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 0.5rem;
+    }
+    .portfolio-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--text-light);
+      margin-bottom: 0.5rem;
+      transition: color 0.3s;
+    }
+    .portfolio-card:hover .portfolio-body h3 { color: var(--gold-light); }
+    .portfolio-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+    .portfolio-metrics {
+      display: flex; gap: 1rem; margin-top: 1rem;
+    }
+    .metric {
+      text-align: center; flex: 1;
+      padding: 0.6rem;
+      background: rgba(212,175,55,0.04);
+      border: 1px solid rgba(212,175,55,0.08);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .portfolio-card:hover .metric {
+      background: rgba(212,175,55,0.08);
+      border-color: rgba(212,175,55,0.2);
+    }
+    .metric-value { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-light); }
+    .metric-label { font-size: 0.62rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
+
+    /* TESTIMONIALS */
+    #testimonials {
+      background:
+        radial-gradient(ellipse 50% 70% at 50% 100%, rgba(212,175,55,0.07) 0%, transparent 60%),
+        linear-gradient(180deg, #0D0D0D 0%, #0D1208 100%);
+    }
+    .testi-header { text-align: center; margin-bottom: 4rem; }
+    .testi-header .section-label { justify-content: center; }
+    .testi-header .section-label::before { display: none; }
+    .testi-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+    }
+    .testi-card {
+      padding: 2.5rem;
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 4px;
+      background: rgba(13,13,13,0.5);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+    .testi-card::before {
+      content: '"';
+      position: absolute; top: 1rem; right: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem; line-height: 1;
+      color: rgba(212,175,55,0.06);
+      font-weight: 900;
+    }
+    .testi-card:hover { transform: translateY(-6px); border-color: rgba(126,200,164,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .testi-stars { display: flex; gap: 0.2rem; margin-bottom: 1.2rem; }
+    .star { color: var(--gold); font-size: 0.8rem; }
+    .testi-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem; }
+    .testi-author { display: flex; align-items: center; gap: 1rem; }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; color: var(--dark);
+      font-family: 'Playfair Display', serif;
+    }
+    .testi-name { font-size: 0.9rem; font-weight: 600; color: var(--text-light); }
+    .testi-role { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    /* CONTACT */
+    #contact {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126,200,164,0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 20% 50%, rgba(212,175,55,0.06) 0%, transparent 50%),
+        linear-gradient(180deg, #0D1A12 0%, #0D1208 100%);
+    }
+    .contact-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group label {
+      font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 2px;
+      padding: 0.9rem 1.1rem;
+      color: var(--text-light);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.3s;
+      width: 100%;
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select option { background: var(--dark-2); color: var(--text-light); }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--gold);
+      background: rgba(212,175,55,0.04);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.08);
+    }
+    .submit-btn {
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--dark);
+      border: none; border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer;
+      position: relative; overflow: hidden;
+      transition: all 0.35s;
+      align-self: flex-start;
+    }
+    .submit-btn::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+    .submit-btn:hover::before { transform: translateX(0); }
+    .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(126,200,164,0.25); }
+    .submit-btn span { position: relative; z-index: 1; }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 900; line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .contact-desc { color: var(--text-muted); line-height: 1.8; font-size: 0.95rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 1.2rem; }
+    .contact-item {
+      display: flex; align-items: center; gap: 1.2rem;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 4px;
+      background: rgba(13,13,13,0.4);
+      transition: all 0.3s;
+    }
+    .contact-item:hover { border-color: rgba(212,175,55,0.3); transform: translateX(6px); }
+    .ci-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(126,200,164,0.15));
+      border: 1px solid rgba(212,175,55,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .contact-item:hover .ci-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark); }
+    .ci-label { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase; }
+    .ci-value { font-size: 0.9rem; color: var(--text-light); margin-top: 0.2rem; }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 4rem;
+      border-top: 1px solid rgba(212,175,55,0.1);
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(13,13,13,0.98);
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--gold), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.78rem; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    /* FLOATING PARTICLES */
+    .particle {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      z-index: 0;
+      animation: particleDrift linear infinite;
+    }
+    @keyframes particleDrift {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* SVG ICON HELPER */
+    .icon { display: inline-block; width: 1em; height: 1em; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 2rem; }
+      section { padding: 5rem 2rem; }
+      #stats-band { padding: 3rem 2rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .avatar-frame { max-width: 100%; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr; max-width: 500px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .portfolio-header { flex-direction: column; gap: 1rem; }
+      .nav-links { display: none; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="logo">IR Solutions</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb-1"></div>
+    <div class="hero-orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Projects
+      </div>
+      <h1 class="hero-name">
+        <span class="gold">IJAZ</span> <span class="green">RAHEEM</span>
+      </h1>
+      <div class="hero-title">
+        Professional <strong>SEO Strategist</strong> &amp; Digital Growth Expert
+      </div>
+      <p class="hero-desc">
+        Driving organic growth and search dominance for businesses across Pakistan and beyond. From technical audits to content strategy, I craft SEO solutions that deliver real, measurable results.
+      </p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn-primary"><span>View My Work</span></a>
+        <a href="#contact" class="btn-secondary">Let's Talk</a>
+      </div>
+    </div>
+    <div class="scroll-line">
+      <span>Scroll</span>
+      <div class="scroll-line-bar"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div id="stats-band">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-number">150<span class="stat-plus">+</span></div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card reveal" style="transition-delay:0.1s">
+        <div class="stat-number">8<span class="stat-plus">+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card reveal" style="transition-delay:0.2s">
+        <div class="stat-number">98<span class="stat-plus">%</span></div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat-card reveal" style="transition-delay:0.3s">
+        <div class="stat-number">80<span class="stat-plus">+</span></div>
+        <div class="stat-label">Keywords Ranked #1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-avatar reveal">
+        <div class="avatar-frame">
+          <div class="avatar-initials">IR Solutions</div>
+          <div class="avatar-tag">
+            <h4>IJAZ RAHEEM</h4>
+            <p>SEO Expert | Pakistan</p>
+          </div>
+        </div>
+        <div class="about-corner"></div>
+      </div>
+      <div class="about-text reveal" style="transition-delay:0.2s">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">
+          Turning Search Engines<br>Into <span class="gold-text">Growth Machines</span>
+        </h2>
+        <p class="section-sub">
+          I'm IJAZ RAHEEM, a results-driven SEO expert based in Pakistan with a passion for transforming digital presence. I combine technical expertise with creative strategy to help businesses dominate search results and attract their ideal audience.
+        </p>
+        <div class="skills-list">
+          <div class="skill-row">
+            <div class="skill-head">
+              <span class="skill-name">Technical SEO</span>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-head">
+              <span class="skill-name">On-Page Optimization</span>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:92%; animation-delay:0.2s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-head">
+              <span class="skill-name">Link Building</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:88%; animation-delay:0.4s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-head">
+              <span class="skill-name">Keyword Research &amp; Strategy</span>
+              <span class="skill-pct">97%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:97%; animation-delay:0.6s"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-head">
+              <span class="skill-name">Local SEO</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%; animation-delay:0.8s"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">
+        Comprehensive <span class="gold-text">SEO Services</span><br>Built to Rank
+      </h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <h3>Technical SEO Audit</h3>
+        <p>Deep-dive analysis of your site's technical health: crawlability, speed, structure, schema markup, and Core Web Vitals optimization.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.1s">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>On-Page Optimization</h3>
+        <p>Strategic optimization of meta tags, content structure, internal linking, and user signals to maximize your page authority.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.2s">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3>Link Building</h3>
+        <p>White-hat link acquisition strategies using outreach, guest posting, and digital PR to build authoritative backlink profiles.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.1s">
+        <div class="service-num">04</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Local SEO</h3>
+        <p>Dominate local search in Pakistan. Google Business Profile optimization, citation building, and local content strategy.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.2s">
+        <div class="service-num">05</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3>Content SEO Strategy</h3>
+        <p>Data-driven content planning and keyword clustering to build topical authority and capture high-intent search traffic.</p>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.3s">
+        <div class="service-num">06</div>
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>SEO Reporting &amp; Analytics</h3>
+        <p>Transparent, comprehensive monthly reports with actionable insights, rank tracking, and ROI measurement dashboards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-inner">
+      <div class="process-grid">
+        <div class="reveal">
+          <div class="section-label">My Approach</div>
+          <h2 class="section-title">
+            A Proven <span class="green-text">Process</span> For<br>Real Results
+          </h2>
+          <p class="section-sub" style="margin-top:1rem;">
+            Every successful SEO campaign follows a structured, data-first methodology that eliminates guesswork and delivers consistent growth.
+          </p>
+        </div>
+        <div class="process-steps reveal" style="transition-delay:0.2s">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Discovery &amp; Research</h4>
+              <p>Deep-dive into your business, competitors, and target audience to build a custom strategic foundation.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Technical Audit &amp; Fixing</h4>
+              <p>Identify and resolve all technical barriers preventing your site from reaching its ranking potential.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>On-Page &amp; Content Optimization</h4>
+              <p>Optimize every page element and create content that satisfies both users and search engine algorithms.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Authority &amp; Link Building</h4>
+              <p>Build a powerful backlink profile through ethical outreach and strategic partnerships.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>Monitor, Report &amp; Scale</h4>
+              <p>Continuous tracking, transparent reporting, and iterative refinement to sustain and accelerate growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="portfolio-header reveal" style="max-width:1200px;margin:0 auto 4rem;">
+      <div>
+        <div class="section-label">Case Studies</div>
+        <h2 class="section-title">
+          Results That <span class="gold-text">Speak</span> Loudest
+        </h2>
+      </div>
+      <a href="#contact" class="btn-secondary" style="white-space:nowrap;align-self:flex-end">See All Projects</a>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">
+          <span class="thumb-label">E-Commerce</span>
+          <div class="thumb-overlay"><span class="thumb-cta">View Case Study</span></div>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">E-Commerce SEO</div>
+          <h3>Fashion Brand BD — 340% Traffic Growth</h3>
+          <p>Full SEO overhaul for a Dhaka-based fashion retailer. Technical fixes, content strategy, and link building.</p>
+          <div class="portfolio-metrics">
+            <div class="metric"><div class="metric-value">340%</div><div class="metric-label">Traffic</div></div>
+            <div class="metric"><div class="metric-value">85</div><div class="metric-label">KW Ranked</div></div>
+            <div class="metric"><div class="metric-value">6mo</div><div class="metric-label">Timeline</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" style="transition-delay:0.1s">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(126,200,164,0.15),rgba(212,175,55,0.1));">
+          <span class="thumb-label">Healthcare</span>
+          <div class="thumb-overlay"><span class="thumb-cta">View Case Study</span></div>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Local SEO</div>
+          <h3>Chittagong Clinic — #1 Local Rankings</h3>
+          <p>Comprehensive local SEO strategy that placed the clinic at the top of all major treatment keywords in Chittagong.</p>
+          <div class="portfolio-metrics">
+            <div class="metric"><div class="metric-value">#1</div><div class="metric-label">Local Rank</div></div>
+            <div class="metric"><div class="metric-value">220%</div><div class="metric-label">Leads</div></div>
+            <div class="metric"><div class="metric-value">4mo</div><div class="metric-label">Timeline</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" style="transition-delay:0.2s">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(126,200,164,0.08));">
+          <span class="thumb-label">SaaS</span>
+          <div class="thumb-overlay"><span class="thumb-cta">View Case Study</span></div>
+        </div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Technical SEO</div>
+          <h3>BD Tech Startup — 500% Organic Growth</h3>
+          <p>Technical SEO overhaul and content strategy for a Dhaka-based SaaS company targeting the South Asian market.</p>
+          <div class="portfolio-metrics">
+            <div class="metric"><div class="metric-value">500%</div><div class="metric-label">Growth</div></div>
+            <div class="metric"><div class="metric-value">120</div><div class="metric-label">KW Page 1</div></div>
+            <div class="metric"><div class="metric-value">8mo</div><div class="metric-label">Timeline</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testi-header reveal">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">
+        Trusted by <span class="gold-text">Clients</span> Across Pakistan
+      </h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span>
+        </div>
+        <p class="testi-text">"IJAZ RAHEEM transformed our online visibility completely. Within 5 months, our website traffic tripled and we're now ranking for all our major keywords. Truly exceptional work."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AM</div>
+          <div>
+            <div class="testi-name">Arif Mahmud</div>
+            <div class="testi-role">CEO, Dhaka Fashion House</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.15s">
+        <div class="testi-stars">
+          <span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span>
+        </div>
+        <p class="testi-text">"Professional, knowledgeable, and delivers real results. Our clinic now receives consistent patient inquiries from Google searches. Highly recommended for local businesses."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RK</div>
+          <div>
+            <div class="testi-name">Dr. Rina Khan</div>
+            <div class="testi-role">Director, Chittagong Health Center</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.3s">
+        <div class="testi-stars">
+          <span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span><span class="star">*</span>
+        </div>
+        <p class="testi-text">"Working with Sojib was a game-changer. His technical SEO knowledge is unmatched. Our domain authority grew from 12 to 45 in just 8 months. Outstanding professional."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">TI</div>
+          <div>
+            <div class="testi-name">Tanvir Islam</div>
+            <div class="testi-role">Founder, BD Tech Solutions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="contact-heading">
+          Let's Grow<br>Your <span class="gold-text">Search</span><br><span class="green-text">Presence</span>
+        </h2>
+        <p class="contact-desc">
+          Ready to dominate search results? Let's discuss your goals and craft an SEO strategy tailored specifically to your business needs.
+        </p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-value">Islamabad, Pakistan</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value">hello@irsolutions.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <div class="ci-value">+92 332-6165905</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal" style="transition-delay:0.2s">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe"/>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Website URL</label>
+          <input type="url" placeholder="https://yourwebsite.com"/>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Technical SEO Audit</option>
+            <option>On-Page Optimization</option>
+            <option>Link Building</option>
+            <option>Local SEO</option>
+            <option>Content SEO Strategy</option>
+            <option>Full SEO Package</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea placeholder="Tell me about your project goals and current SEO challenges..."></textarea>
+        </div>
+        <button class="submit-btn"><span>Send Message</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">IR Solutions</div>
+    <div class="footer-copy">2026 IR Solutions. All rights reserved. SEO Expert, Pakistan.</div>
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // Custom Cursor
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx - 6 + 'px';
+      cursor.style.top = my - 6 + 'px';
+    });
+    function animateRing() {
+      rx += (mx - rx - 20) * 0.14;
+      ry += (my - ry - 20) * 0.14;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    // Hover Scale
+    document.querySelectorAll('a, button, .service-card, .portfolio-card, .testi-card, .stat-card').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2)'; });
+      el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+    });
+
+    // Nav Scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Reveal on Scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Floating Particles
+    function spawnParticle() {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 3 + 1;
+      const isGold = Math.random() > 0.5;
+      p.style.cssText = `
+        width:${size}px; height:${size}px;
+        background:${isGold ? 'rgba(212,175,55,0.5)' : 'rgba(126,200,164,0.5)'};
+        left:${Math.random() * 100}vw;
+        animation-duration:${Math.random() * 12 + 8}s;
+        animation-delay:${Math.random() * -15}s;
+      `;
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 25000);
+    }
+    for (let i = 0; i < 20; i++) spawnParticle();
+    setInterval(spawnParticle, 1500);
+
+    // Counter Animation
+    function animateCounter(el, target, suffix) {
+      let current = 0;
+      const step = target / 60;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.querySelector('.stat-number').innerHTML = Math.floor(current) + '<span class="stat-plus">' + suffix + '</span>';
+      }, 25);
+    }
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const cards = e.target.querySelectorAll('.stat-card');
+          const data = [[150,'+'],[5,'+'],[98,'%'],[80,'+']];
+          cards.forEach((card, i) => animateCounter(card, data[i][0], data[i][1]));
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    statsObserver.observe(document.getElementById('stats-band'));
+
+    // Form submit handler
+    document.querySelector('.submit-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      const btn = this;
+      btn.querySelector('span').textContent = 'Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #4A9E78, #7EC8A4)';
+      setTimeout(() => {
+        btn.querySelector('span').textContent = 'Send Message';
+        btn.style.background = '';
+      }, 3000);
+    });
+
+    // Smooth Scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
